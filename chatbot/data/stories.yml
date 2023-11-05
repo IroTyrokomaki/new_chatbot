@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+  - intent: check_weather
+  - action: utter_check_weather
+  - intent: traffic_information
+  - action: utter_traffic_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+  - intent: location_info
+  - action: utter_location_info
+  - intent: check_weather
+  - action: utter_check_weather
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+  - intent: find_gas_station
+  - action: utter_find_gas_station
+  - intent: deny
+  - action: utter_sth_else
+  - intent: deny
+  - action: utter_apologize
+  - intent: goodbye
+  - action: utter_goodbye
+

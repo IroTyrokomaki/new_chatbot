@@ -1,0 +1,99 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - what's up?
+    - hallo
+    - hello
+    - hi 
+    - hi there
+    - hey there
+    - hello there
+    - good morning
+    - good evening
+    - morning
+    - moin
+    - Hello!
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - thanks, bye 
+    - see you around
+    - see you later
+    - good night
+    - bye for now
+    - goodbye
+    - have a nice day
+    - bye bye
+    - see you later
+    - cu
+
+- intent: affirm
+  examples: |
+    - I agree
+    - yes
+    - y
+    - absolutely
+    - indeed
+    - of course
+    - that sounds good
+    - you got it
+    - ok 
+    - let's go
+    - go on 
+
+- intent: deny
+  examples: |
+    - nope
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I can't
+    - nah
+
+- intent: traffic_information
+  examples: |
+    - what's the traffic on the downtown?
+    - tell me about the crash on the highway
+    - give me a traffic report
+    - accidents on the way?
+    - are there any traffic jams?
+    - traffic situation now
+
+- intent: location_info
+  examples: |
+    - tell me first and then share with my husband my location
+    - locate me on the map
+    - give me my location
+    - where am I?
+
+- intent: find_gas_station
+  examples: |
+    - I'm running out of gas! any gas station?
+    - need to refuel
+    - find gas station nearby
+    - where to gas up?
+
+- intent: check_weather
+  examples: |
+    - give me the weather update at my destination
+    - Tell me if I need a coat arriving in Athens
+    - will I need winter clothes for the weekend?
+    - check the temperature in Athens right now
+    - What's the weather forecast for tomorrow?
+    - I need the weather conditions for tomorrow morning 
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

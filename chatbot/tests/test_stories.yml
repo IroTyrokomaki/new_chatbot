@@ -1,0 +1,84 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      good morning
+    intent: greet
+  - action: utter_greet
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_affirm
+  - user: |
+      Tell me if I need a coat arriving in Athens
+    intent: check_weather
+  - action: utter_check_weather
+  - user: |
+      what's the traffic on the downtown?
+    intent: traffic_information
+  - action: utter_traffic_information
+  - user: |
+      thanks, bye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path
+  steps:
+  - user: |
+      what's up?
+    intent: greet
+  - action: utter_greet
+  - user: |
+      you got it
+    intent: affirm
+  - action: utter_affirm
+  - user: |
+      I'm running out of gas! any gas station?
+    intent: find_gas_station
+  - action: utter_find_gas_station
+  - user: |
+      not really
+  - intent: deny
+  - action: utter_sth_else
+  - user: |
+      no
+  - intent: deny
+  - action: utter_apologize
+  - user: |
+      bye for now
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: happy path 2
+  steps:
+  - user: |
+      hi there
+    intent: greet
+  - action: utter_greet
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_affirm
+  - user: |
+      locate me on the map
+    intent: location_info
+  - action: utter_location_info
+  - user: |
+      I need the weather conditions for tomorrow morning
+    intent: check_weather
+  - action: utter_check_weather
+  - user: |
+      see you later
+    intent: goodbye
+  - action: utter_goodbye
+
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot

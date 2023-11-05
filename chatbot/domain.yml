@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - check_weather
+  - traffic_information
+  - find_gas_station
+  - location_info
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hi! Do you need help?"
+
+  utter_affirm:
+  - text: "I can help you. Tell me!"
+
+  utter_check_weather:
+  - text: "The temperature will fluctuate at normal levels for the season with a slight dropin the evening which will reach 20 degrees Celsius. A cardigan will come in handy!"
+
+  utter_find_gas_station:
+  - text: "It's Sunday. All nearby stores are closed. The nearest open is 20 km away. Will you be able to get there?"
+
+  utter_traffic_information:
+  - text: "The current traffic situation is as follows: There are no reported accidents or traffic jams at the moment. Traffic is flowing smoothly."
+
+  utter_sth_else:
+  - text: "Do you need something else?"
+
+  utter_apologize:
+  - text: "I'm sorry I couldn't help you. If you need anything else, I'm here!"
+
+  utter_deny:
+  - text: "I'm sorry."
+
+  utter_location_info:
+  - text: "You are at 134 Mikras Asias Street, Ano Glyfada"
+
+  utter_goodbye:
+  - text: "My pleasure, bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
